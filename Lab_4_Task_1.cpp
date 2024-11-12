@@ -132,7 +132,7 @@ class stack
 int main()
 {
     stack temp(10);
-    bool z = temp.is_balanced("(())");
+    bool z = temp.is_balanced("(({)})");
     if(z)
     {
         cout << "Balanced\n";
