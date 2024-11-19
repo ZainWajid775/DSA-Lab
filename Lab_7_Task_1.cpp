@@ -8,13 +8,33 @@ void swap(int* a , int* b)
     *b = temp;
 }
 
+int median(int arr[], int low, int high) {
+    int mid = low + (high - low) / 2;
+
+    if (arr[low] > arr[mid]) 
+    {
+        swap(&arr[low], &arr[mid]);
+    }
+    if (arr[low] > arr[high]) 
+    {
+        swap(&arr[low], &arr[high]);
+    }
+    if (arr[mid] > arr[high]) 
+    {
+        swap(&arr[mid], &arr[high]);
+    }
+
+    swap(&arr[mid], &arr[high]);
+    return arr[high];
+}
+
 int partition(int arr[] , int low , int high)
 {
-    int pivot = arr[high];
-    int i = low - 1;
+    int pivot = median(arr, low, high);
+    int i = low - 1; 
     for( int j = low ; j < high ; j++)
     {
-        if(arr[j] <= pivot)
+        if(arr[j] >= pivot)
         {
             i++;
             swap(&arr[i] , &arr[j]);
