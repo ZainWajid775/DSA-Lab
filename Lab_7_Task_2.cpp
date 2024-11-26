@@ -107,6 +107,7 @@ int main()
         cout << "Enter product ID for inventory 2 (product " << i + 1 << "): ";
         cin >> arr[n1 + i];
     }
+    cout << endl;
 
     merge_sort(arr, 0, size - 1);
 
