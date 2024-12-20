@@ -1,8 +1,6 @@
 #include <iostream>
 #include <list>
-
 using namespace std;
-
 struct Student
 {
     int id;
@@ -48,14 +46,10 @@ class Hash_Table
             cout << endl;
         }
     }
-
-
 };
-
 int main()
 {
     Hash_Table ht(10);
-
     Student s1 = {101, "Ali", "CS", 3.5};
     Student s2 = {202, "Ahmed", "CS", 3.6};
     Student s3 = {303, "Asad", "CS", 3.7};
@@ -66,7 +60,7 @@ int main()
     Student s8 = {808, "Aamir", "CS", 3.9};
     Student s9 = {909, "Aqeel", "CS", 4.0};
     Student s10 = {910, "Sanawar", "CS", 4.1};
-
+    
     ht.insert(s1);
     ht.insert(s2);
     ht.insert(s3);
@@ -76,9 +70,7 @@ int main()
     ht.insert(s7);
     ht.insert(s8);
     ht.insert(s9);
-    ht.insert(s10);
-    
+    ht.insert(s10);  
     ht.display();
-
     return 0;
 }

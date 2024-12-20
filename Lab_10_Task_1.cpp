@@ -18,6 +18,7 @@ class Graph
         void add_edge(int v1 , int v2)
         {
             adjacency_list[v1].push_back(v2);
+            adjacency_list[v1].push_back(v2);
         }
 
         void print(int source)
